@@ -3,6 +3,8 @@ kind: Route
 metadata:
   labels:
     app: hello-world
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
   name: hello-world
 spec:
   port:
