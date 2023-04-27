@@ -16,4 +16,4 @@ spec:
                 - -c
                 - date; echo Hello from the Kubernetes cluster
               name: hello-cronjob-example
-      restartPolicy: OnFailure
+          restartPolicy: OnFailure
