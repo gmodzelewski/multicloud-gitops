@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: hello-cronjob-example
+  namespace: hello-ns
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - image: busybox:1.28
+            command:
+            - /bin/bash
+            - -c
+            - date; echo Hello from the Kubernetes cluster
+            name: hello-cronjob-example
+      restartPolicy: OnFailure
