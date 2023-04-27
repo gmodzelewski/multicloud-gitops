@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: hello-cronjob-example
-  namespace: hello-ns
+  namespace: hello-world
 spec:
   schedule: "* * * * *"
   jobTemplate:
